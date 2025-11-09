@@ -30,10 +30,37 @@ export default function App() {
   };
 
   return (
-    <TodoTemplate>
-      <h1>Todo List</h1>
-      <TodoInsert onAdd={handleAdd} />
-      <TodoList todos={todos} onToggle={handleToggle} onDelete={handleDelete} />
-    </TodoTemplate>
+    <div
+      style={{
+        width: "100vw",
+        minHeight: "100vh",
+        backgroundColor: "#f0f2f5",
+        padding: "20px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        overflow: "hidden",
+      }}
+    >
+      <TodoTemplate>
+        <h1
+          style={{
+            fontSize: "32px",
+            fontWeight: "700",
+            color: "#2c3e50",
+            marginBottom: "30px",
+            textAlign: "center",
+          }}
+        >
+          📝 Jiwon's Todo
+        </h1>
+        <TodoInsert onAdd={handleAdd} />
+        <TodoList
+          todos={todos}
+          onToggle={handleToggle}
+          onDelete={handleDelete}
+        />
+      </TodoTemplate>
+    </div>
   );
 }
